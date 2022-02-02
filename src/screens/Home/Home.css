@@ -1,0 +1,12 @@
+#background {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  /* background-color: #9dfefe; */
+}
+#img {
+  height: 70%;
+  position: fixed;
+  bottom: 0px;
+  z-index: -1;
+}
