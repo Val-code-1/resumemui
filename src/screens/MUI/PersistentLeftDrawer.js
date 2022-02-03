@@ -15,10 +15,12 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import HomeIcon from "@mui/icons-material/Home";
+import FolderSpecialIcon from "@mui/icons-material/FolderSpecial";
+import "./PersistentLeftDrawer.css";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const themeP = createTheme({
   palette: {
@@ -132,25 +134,31 @@ export default function PersistentDrawerLeft({ pageContent }) {
           </DrawerHeader>
           <Divider />
           <List>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-              <ListItem button key={text}>
+            <Link className="link" to="/">
+              <ListItem button key="Home">
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <HomeIcon />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary="Home" id="homeLink" />
               </ListItem>
-            ))}
+            </Link>
+            <Link className="link" to="portfolio">
+              <ListItem button key="Portfolio">
+                <ListItemIcon>
+                  <FolderSpecialIcon />
+                </ListItemIcon>
+                <ListItemText primary="Portfolio" id="portfolioLink" />
+              </ListItem>
+            </Link>
           </List>
           <Divider />
           <List>
-            {["All mail", "Trash", "Spam"].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
+            <ListItem button key="Something">
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Something" />
+            </ListItem>
           </List>
         </Drawer>
         <Main open={open}>
