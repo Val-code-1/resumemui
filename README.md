@@ -1,3 +1,10 @@
 This is Ben Reit's Resume using MUI
 
-main
+To do:
+
+Big stuff:
+
+Ask Dustin about Glacier Events and add to portfolio
+Heroku this site
+
+Code:

@@ -16,7 +16,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
+import ListAltIcon from "@mui/icons-material/ListAlt";
 import FolderSpecialIcon from "@mui/icons-material/FolderSpecial";
+import PersonIcon from "@mui/icons-material/Person";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
 import "./PersistentLeftDrawer.css";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -142,6 +145,14 @@ export default function PersistentDrawerLeft({ pageContent }) {
                 <ListItemText primary="Home" id="homeLink" />
               </ListItem>
             </Link>
+            <Link className="link" to="history">
+              <ListItem button key="History">
+                <ListItemIcon>
+                  <ListAltIcon />
+                </ListItemIcon>
+                <ListItemText primary="History" id="historyLink" />
+              </ListItem>
+            </Link>
             <Link className="link" to="portfolio">
               <ListItem button key="Portfolio">
                 <ListItemIcon>
@@ -150,15 +161,25 @@ export default function PersistentDrawerLeft({ pageContent }) {
                 <ListItemText primary="Portfolio" id="portfolioLink" />
               </ListItem>
             </Link>
+            <Link className="link" to="about">
+              <ListItem button key="About">
+                <ListItemIcon>
+                  <PersonIcon />
+                </ListItemIcon>
+                <ListItemText primary="About" id="aboutLink" />
+              </ListItem>
+            </Link>
           </List>
           <Divider />
           <List>
-            <ListItem button key="Something">
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText primary="Something" />
-            </ListItem>
+            <Link className="link" to="contact">
+              <ListItem button key="Contact">
+                <ListItemIcon>
+                  <ContactMailIcon />
+                </ListItemIcon>
+                <ListItemText primary="Contact" id="contactLink" />
+              </ListItem>
+            </Link>
           </List>
         </Drawer>
         <Main open={open}>
