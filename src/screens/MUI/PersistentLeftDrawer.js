@@ -182,9 +182,10 @@ export default function PersistentDrawerLeft({ pageContent }) {
             </Link>
           </List>
         </Drawer>
-        <Main open={open}>
+        {/* Alter the sx property to return on all pages here */}
+        <Main open={open} sx={{ backgroundColor: "darkgrey" }}>
           <DrawerHeader />
-          <Typography component={"div"}>{pageContent}</Typography>
+          <Box sx={{ backgroundColor: "lightgrey" }}>{pageContent}</Box>
         </Main>
       </Box>
     </ThemeProvider>
