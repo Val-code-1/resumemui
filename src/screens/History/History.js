@@ -1,22 +1,23 @@
+import { Box, Chip, Container, Stack, Typography } from "@mui/material";
 import React from "react";
 import Job from "./components/Job";
 import "./History.css";
+import { Tech } from "./Technologies/Tech";
 
 const History = () => {
   return (
-    <div>
-      <div id="programs">
-        <h2 className="heading">Experienced using:</h2>
-        <ul className="list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Node</li>
-          <li>Git</li>
-          <li>APIs</li>
-          <li>Javascript</li>
-          <li>React</li>
-        </ul>
-      </div>
+    <Box>
+      <Container>
+        <Typography variant="h3" color={"primary"}>
+          Experienced Using:
+        </Typography>
+      </Container>
+      <br />
+      <Stack direction="row" spacing={0} justifyContent="space-around">
+        {Tech.map((name) => {
+          return <Chip label={name} key={name} color={"primary"} variant="outlined" />;
+        })}
+      </Stack>
       <Job
         title="Direct Support Professional"
         company="Lifescape SD"
@@ -40,7 +41,7 @@ const History = () => {
         date="2013-2014"
         description="Responsible for store including product management, cleaning, opening, and closing. Took pride in helping customers find what they were looking for even if we didn't have it immediately on hand. Trusted with store keys and hundreds of thousands of dollars in product."
       />
-    </div>
+    </Box>
   );
 };
 

@@ -33,7 +33,7 @@ const themeP = createTheme({
     },
     secondary: {
       // This is green.A700 as hex.
-      main: "#11cb5f",
+      main: "#9e74e9",
     },
   },
 });
@@ -183,9 +183,9 @@ export default function PersistentDrawerLeft({ pageContent }) {
           </List>
         </Drawer>
         {/* Alter the sx property to return on all pages here */}
-        <Main open={open} sx={{ backgroundColor: "darkgrey" }}>
+        <Main open={open} sx={{ backgroundColor: "white" }}>
           <DrawerHeader />
-          <Box sx={{ backgroundColor: "lightgrey" }}>{pageContent}</Box>
+          <Box sx={{ backgroundColor: "white" }}>{pageContent}</Box>
         </Main>
       </Box>
     </ThemeProvider>

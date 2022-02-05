@@ -4,7 +4,6 @@ import Diviner from "./Projects/Diviner";
 export default function Portfolio() {
   return (
     <Box>
-      <br />
       <Grid container spacing={8} columns={2} rows={2} justifyContent="center">
         <Grid item m={12}>
           <Diviner />
