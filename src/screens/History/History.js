@@ -2,7 +2,8 @@ import { Box, Chip, Container, Stack, Typography } from "@mui/material";
 import React from "react";
 import Job from "./components/Job";
 import "./History.css";
-import { Tech } from "./Technologies/Tech";
+import { Tech } from "./Data/Tech";
+import { Companies } from "./Data/Companies";
 
 const History = () => {
   return (
@@ -18,7 +19,19 @@ const History = () => {
           return <Chip label={name} key={name} color={"primary"} variant="outlined" />;
         })}
       </Stack>
-      <Job
+      {/* .map over this and add props to object file */}
+      {Companies.map((i) => {
+        return (
+          <Job
+            key={`Job${i}`}
+            title={i.title}
+            company={i.company}
+            date={i.date}
+            description={i.description}
+          />
+        );
+      })}
+      {/* <Job
         title="Direct Support Professional"
         company="Lifescape SD"
         date="May 2010 - Current"
@@ -40,7 +53,7 @@ const History = () => {
         company="Dragon's Den"
         date="2013-2014"
         description="Responsible for store including product management, cleaning, opening, and closing. Took pride in helping customers find what they were looking for even if we didn't have it immediately on hand. Trusted with store keys and hundreds of thousands of dollars in product."
-      />
+      /> */}
     </Box>
   );
 };
