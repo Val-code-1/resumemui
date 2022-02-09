@@ -21,6 +21,7 @@ const Job = ({ title, company, date, description }) => {
           <Typography className="description">{description}</Typography>
         </Container>
         <br />
+        <br />
       </Container>
     </Box>
   );
