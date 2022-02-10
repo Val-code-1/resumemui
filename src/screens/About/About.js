@@ -20,8 +20,9 @@ export default function About() {
           <Typography>
             Hello there, I'm Benjamin Reit from Sioux Falls, South Dakota. I've lived here
             my entire life. I've spent the last decade working for a wonderful company
-            Lifescape. I picked up coding February 2021 when my friends who had been doing
-            it for some time talked me into starting.
+            Lifescape taking care of residents during overnight shifts. I picked up coding
+            once COVID shut everything down and I found myself with more free time. I took
+            to it immediately and enjoy the problem solving aspect of it.
           </Typography>
           <Typography>
             I've always enjoyed computer games and figuring out how things work. It has

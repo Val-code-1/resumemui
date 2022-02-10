@@ -16,13 +16,19 @@ export default function Contact() {
       <br />
       <Grid container spacing={2} columns={1} direction="column">
         <Grid item>
-          <TextField id="outlined-basic" label="Name" variant="outlined" />
+          <TextField
+            id="outlined-basic"
+            label="Name"
+            variant="outlined"
+            autoComplete="off"
+          />
         </Grid>
         <Grid item>
           <TextField
             id="outlined-basic"
             label="Email"
             variant="outlined"
+            autoComplete="off"
             type={"email"}
           />
         </Grid>
