@@ -1,47 +1,30 @@
-import {
-  Box,
-  Button,
-  Grid,
-  TextareaAutosize,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 export default function Contact() {
   return (
     <Box>
       <Typography variant="h2" color="primary">
-        Send me an E-mail
+        Get in touch
       </Typography>
       <br />
       <Grid container spacing={2} columns={1} direction="column">
         <Grid item>
-          <TextField
-            id="outlined-basic"
-            label="Name"
-            variant="outlined"
-            autoComplete="off"
-          />
+          <a href="https://github.com/Val-code-1" target="blank">
+            Github
+          </a>
         </Grid>
         <Grid item>
-          <TextField
-            id="outlined-basic"
-            label="Email"
-            variant="outlined"
-            autoComplete="off"
-            type={"email"}
-          />
+          <a href="https://www.linkedin.com/in/benjamin-reit-06050516a/" target="blank">
+            Linkedin
+          </a>
         </Grid>
         <Grid item>
-          <TextareaAutosize
-            aria-label="minimum height"
-            minRows={5}
-            placeholder="Send me a message"
-            style={{ width: 400 }}
-          />
+          <a href="mailto:" target="blank">
+            E-mail
+          </a>
         </Grid>
         <Grid item>
-          <Button variant="contained">Send</Button>
+          <Typography>Something else</Typography>
         </Grid>
       </Grid>
     </Box>
