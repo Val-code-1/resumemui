@@ -24,6 +24,7 @@ export default function About() {
             once COVID shut everything down and I found myself with more free time. I took
             to it immediately and enjoy the problem solving aspect of it.
           </Typography>
+          {/* Dustin say up here */}
           <Typography>
             I've always enjoyed computer games and figuring out how things work. It has
             served me very well programming. I've been an avid player of Magic the
@@ -31,6 +32,7 @@ export default function About() {
             an official judge for the game. If you are familiar with the game you'll know
             the rule set can be as complex as programming is sometimes.
           </Typography>
+          <Typography>{/* Technologies/Loves of coding */}</Typography>
         </Container>
       </Paper>
     </Box>

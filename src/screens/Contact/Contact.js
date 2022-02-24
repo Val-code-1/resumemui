@@ -7,7 +7,7 @@ export default function Contact() {
         Get in touch
       </Typography>
       <br />
-      <Grid container spacing={2} columns={1} direction="column">
+      <Grid container spacing={5} columns={1} direction="column">
         <Grid item>
           <a href="https://github.com/Val-code-1" target="blank">
             Github
@@ -19,8 +19,9 @@ export default function Contact() {
           </a>
         </Grid>
         <Grid item>
-          <a href="mailto:" target="blank">
-            E-mail
+          <a href="mailto:reit.ben@gmail.com" rel="noreferrer" target="_blank">
+            E-mail me, it is my last name then . then my first name but just the short
+            version, then gmail.com. Don't forget the @
           </a>
         </Grid>
         <Grid item>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useRef, useEffect } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -21,6 +22,8 @@ import FolderSpecialIcon from "@mui/icons-material/FolderSpecial";
 import PersonIcon from "@mui/icons-material/Person";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import "./PersistentLeftDrawer.css";
+
+import gsap from "gsap";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link } from "react-router-dom";
@@ -97,6 +100,17 @@ export default function PersistentDrawerLeft({ pageContent }) {
     setOpen(false);
   };
 
+  const nameRef = useRef();
+  useEffect(() => {
+    gsap.from(nameRef.current, {
+      duration: 1.0,
+      ease: "power1.out",
+      opacity: 0,
+      x: 200,
+      delay: 3.3,
+    });
+  }, []);
+
   return (
     <ThemeProvider theme={themeP}>
       <Box sx={{ display: "flex" }}>
@@ -112,7 +126,7 @@ export default function PersistentDrawerLeft({ pageContent }) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap component="div">
+            <Typography variant="h6" noWrap component="div" ref={nameRef}>
               Benjamin Reit
             </Typography>
           </Toolbar>

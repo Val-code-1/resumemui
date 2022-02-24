@@ -1,12 +1,9 @@
-#programs {
-  margin-left: 5%;
-  margin-right: 25%;
-  font-size: 30px;
-}
-.heading {
-  color: purple;
+#techBox {
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 
 #list {
-  margin-top: 30px;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }

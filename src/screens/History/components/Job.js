@@ -1,7 +1,24 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
 import React from "react";
-// import "./Job.css";
+import { Box, Container, Stack, Typography } from "@mui/material";
+// import gsap from "gsap";
+import "./Job.css";
 const Job = ({ title, company, date, description }) => {
+  // const jobRef = useRef();
+
+  // useEffect(() => {
+  //   gsap.from(jobRef.current, {
+  //     duration: 2.5,
+  //     ease: "power4.out",
+  //     y: -200,
+  //     opacity: 0,
+  //     delay: 0.3,
+  //     stagger: {
+  //       amount: 1.5,
+  //       grid: "auto",
+  //     },
+  //   });
+  //   // switch this to a gentile fade from top
+  // });
   return (
     <Box className="job">
       <Container>
