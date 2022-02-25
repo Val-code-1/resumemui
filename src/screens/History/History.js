@@ -10,14 +10,14 @@ const History = () => {
   const jobRef = useRef();
 
   useEffect(() => {
-    gsap.from(jobRef.current, {
+    gsap.from(".job", {
       duration: 2.5,
       ease: "power4.out",
       y: -200,
       opacity: 0,
       delay: 0.3,
       stagger: {
-        amount: 1.5,
+        amount: 1.0,
         grid: "auto",
       },
     });
