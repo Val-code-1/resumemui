@@ -10,14 +10,27 @@ const History = () => {
   const jobRef = useRef();
 
   useEffect(() => {
+    gsap.from(".chip", {
+      duration: 5,
+      ease: "power4.out",
+      x: -200,
+      opacity: 0,
+      delay: 0.3,
+      stagger: {
+        amount: 2.0,
+      },
+    });
+  });
+
+  useEffect(() => {
     gsap.from(".job", {
       duration: 2.5,
       ease: "power4.out",
       y: -200,
       opacity: 0,
-      delay: 0.3,
+      delay: 4.1,
       stagger: {
-        amount: 1.0,
+        amount: 1.2,
         grid: "auto",
       },
     });
@@ -34,7 +47,15 @@ const History = () => {
         <br />
         <Stack direction="row" spacing={0} justifyContent="space-around">
           {Tech.map((name) => {
-            return <Chip label={name} key={name} color={"primary"} variant="outlined" />;
+            return (
+              <Chip
+                className="chip"
+                label={name}
+                key={name}
+                color={"primary"}
+                variant="outlined"
+              />
+            );
           })}
         </Stack>
       </Container>
