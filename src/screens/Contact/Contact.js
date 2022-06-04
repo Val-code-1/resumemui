@@ -33,9 +33,6 @@ export default function Contact() {
             version, then gmail.com. Don't forget the @
           </a>
         </Grid>
-        <Grid item>
-          <Typography>Something else</Typography>
-        </Grid>
       </Grid>
     </Box>
   );

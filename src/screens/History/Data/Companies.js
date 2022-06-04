@@ -1,5 +1,12 @@
 export const Companies = [
   {
+    title: "Frontend Developer",
+    company: "Mammoth Studios",
+    date: "January 2022 - Current",
+    description:
+      "Building Mobile games/apps for Google Play Store/Apple App Store; Handling game-mechanic/UI accessibility. Working on a small team of five developers; using Agile methodologies, guiding visual/user-interface design; also pitched product/game design decisions.",
+  },
+  {
     title: "Direct Support Professional",
     company: "Lifescape SD",
     date: "May 2010 - Current",
